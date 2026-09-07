@@ -1,0 +1,128 @@
+/* GSAP Parallax Styles */
+#gsap-parallax-wrapper {
+  position: relative;
+  width: 100%;
+  height: 4800px;
+  background-color: #0e0a1a;
+  overflow: visible;
+}
+
+#gsap-parallax-wrapper .sticky-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+#gsap-parallax-wrapper .parallax-svg-holder,
+#gsap-parallax-wrapper .parallax-svg-holder svg,
+#gsap-parallax-wrapper svg.parallax {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#text,
+#arrow {
+  transform-origin: 50% 50%;
+}
+
+#info2 {
+  transform-origin: 50% 50%;
+}
+
+@media (max-width: 490px) {
+  #text,
+  #arrow {
+    transform-origin: 50% 50%;
+    transform: translateY(-120px) scale(0.8);
+  }
+
+  #info2 {
+    transform-origin: 50% 50%;
+    transform: translateY(-120px) scale(0.8);
+  }
+}
+
+/* Foundations GSAP Cards Loop - Light Theme */
+#foundations-section {
+  position: relative;
+  width: 100%;
+  height: 3200px;
+  overflow: visible;
+  border-top: 1px solid #E8E8E8;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+#foundations-section .foundations-sticky-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 245, 247, 0.95) 0%, #FFFFFF 50%, #F8F9FA 100%);
+  z-index: 20;
+}
+
+.foundations-cards {
+  position: absolute;
+  width: 19rem;
+  height: 27rem;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.foundations-cards li {
+  list-style: none;
+  padding: 1.25rem;
+  margin: 0;
+  width: 19rem;
+  height: 27rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1.25rem;
+  background: linear-gradient(160deg, #FFFFFF 0%, #FAFBFD 70%, #FFF5F7 100%);
+  border: 1px solid rgba(226, 30, 76, 0.22);
+  box-shadow: 0 20px 45px rgba(226, 30, 76, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  user-select: none;
+  cursor: grab;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foundations-cards li:hover {
+  border-color: rgba(226, 30, 76, 0.45);
+  box-shadow: 0 24px 55px rgba(226, 30, 76, 0.14), 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.foundations-cards li:active {
+  cursor: grabbing;
+}
+
+.foundations-drag-proxy {
+  visibility: hidden;
+  position: absolute;
+}
